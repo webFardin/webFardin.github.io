@@ -1,0 +1,292 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import url(https://fonts.googleapis.com/css?family=Quicksand);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  font-size: 16px;
+  user-select: none;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+img {
+  border-style: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+/* Main Code */
+body {
+  font-family: "quicksand";
+  background: #131418;
+  width: 100vw;
+  overflow-x: hidden;
+
+  /* remove this later */
+  height: 1000rem;
+}
+
+.section-me {
+  margin-top: -2rem;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  text-align: justify;
+  /* gap: 2rem; */
+}
+
+.section-me .programmer-animation {
+  transform: translateY(10%);
+  width: 20rem;
+  height: 20rem;
+  margin: auto;
+}
+
+.section-me .programmer-animation lottie-player {
+  width: 100%;
+}
+
+.section-me .introduce-text {
+  padding: 0 1rem;
+  opacity: 0;
+  transition: 1s;
+}
+
+.section-me .introduce-text .contact-button {
+  color: #00ffbf;
+  margin: auto;
+  margin-top: 1.5rem;
+  width: 9rem;
+  height: 2.5rem;
+  border: 1px solid #00ffbf;
+  border-radius: 1rem;
+  padding: 0.4rem;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.section-me .introduce-text .contact-button > * {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.section-me .introduce-text .contact-button > *:last-child {
+  position: absolute;
+  width: 100%;
+}
+
+.section-me .introduce-text .contact-button > *:nth-child(2) > * {
+  opacity: 0;
+  transition: color 0.3s, opacity 0.8s;
+  width: 1.5rem;
+}
+
+.section-me .introduce-text .contact-button:hover {
+  font-weight: bold;
+  color: #131418;
+  background: #00ffbf;
+}
+
+.section-me .technologies-section {
+  /* in desktop version, display should be flex */
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  fill: #00ffbf;
+  height: 15rem;
+}
+
+.section-me .technologies-section > * {
+  width: 10rem;
+  position: absolute;
+}
