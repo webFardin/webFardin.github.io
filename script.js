@@ -72,7 +72,7 @@ let worksSectionSubjectsData = [
     description: "Small components of websites",
     boxes: [
       {
-        gif: "https://i.postimg.cc/bJbyJQnf/20220629-175612.gif",
+        gif: "https://i.postimg.cc/nh5y2c5J/20221116-174755.gif",
         github: "https://github.com/webFardin/Templates/tree/main/01-Loading",
         codepen: "https://codepen.io/webFardin/full/JjpXGME",
       },
