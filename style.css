@@ -15,6 +15,7 @@ html {
   -webkit-text-size-adjust: 100%;
   font-size: 16px;
   user-select: none;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -199,13 +200,14 @@ template {
 }
 
 /* Main Code */
+
 body {
   font-family: "quicksand";
   background: #131418;
   width: 100vw;
   overflow-x: hidden;
   display: grid;
-  gap: 3rem;
+  gap: 5rem;
 }
 
 .section-me {
@@ -302,6 +304,19 @@ body {
   font-size: 2rem;
 }
 
+.sections-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  color: #00ffdd;
+  font-size: 1.5rem;
+}
+
+.sections-title svg {
+  width: 1.8rem;
+}
+
 .section-works .works-section-subjects,
 .section-works .works-section-subjects > * {
   display: flex;
@@ -330,7 +345,6 @@ body {
   font-size: 0.9rem;
 }
 
-.section-works h2,
 .section-works h4,
 .section-works h5 {
   font-size: inherit;
@@ -428,4 +442,48 @@ body {
   .sample-works-boxes-hover {
   visibility: visible;
   opacity: 1;
+}
+
+.section-contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 0 2rem;
+}
+
+.contact-section-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.section-contact .contact-section-items > * {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 15rem;
+  color: #00ffdd;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.4rem;
+}
+
+.section-contact .contact-section-items svg {
+  width: 10rem;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.section-contact .contact-section-items > *:hover svg {
+  opacity: 1;
+}
+
+.section-contact .section-contact-brand-names {
+  font-family: "pacifico";
 }
