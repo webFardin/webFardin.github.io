@@ -7,7 +7,13 @@ let contactButtonIcons = document.querySelectorAll(
   ".contact-button > *:nth-child(2) > *"
 );
 
+let contactButton = document.getElementById("contactButton");
+
 let worksSectionSubjects = document.getElementById("worksSectionSubjects");
+
+let codeAnimationWrapper = document.getElementById("codeAnimationWrapper");
+
+let navigation = document.getElementById("navigation");
 
 let typedWords = 0;
 function contactButtonTypeEffect() {
@@ -155,4 +161,94 @@ worksSectionSubjectsData.forEach((item, index) => {
         </div>
       </div>`;
   });
+});
+
+let codeAnimationTypedWords = 0;
+let codeAnimationTypeState = 1;
+let codeAnimationText;
+let codeAnimationTypeStatesNumber = 4;
+
+function codeAnimationTypeEffect() {
+  switch (codeAnimationTypeState) {
+    case 1:
+      codeAnimationText = 'let me = "Fardin Ebrahimi";';
+      break;
+
+    case 2:
+      codeAnimationText = 'let role = "Front-End Programmer";';
+      break;
+
+    case 3:
+      codeAnimationText = 'let skills = "HTML, CSS, JavaScript, Git";';
+      break;
+
+    case 4:
+      codeAnimationText = 'let state = "Junior";';
+      break;
+  }
+
+  codeAnimationWrapper.textContent +=
+    codeAnimationText[codeAnimationTypedWords];
+  codeAnimationTypedWords = codeAnimationWrapper.textContent.length;
+
+  if (codeAnimationTypedWords < codeAnimationText.length) {
+    setTimeout(codeAnimationTypeEffect, 150);
+  } else {
+    setTimeout(() => {
+      codeAnimationTextRemover();
+    }, 4000);
+  }
+}
+
+function codeAnimationTextRemover() {
+  codeAnimationWrapper.textContent = codeAnimationWrapper.textContent.slice(
+    0,
+    -1
+  );
+  codeAnimationTypedWords = codeAnimationWrapper.textContent.length;
+  if (codeAnimationWrapper.textContent.length != 0) {
+    setTimeout(codeAnimationTextRemover, 50);
+  } else {
+    codeAnimationTypeState++;
+    if (codeAnimationTypeState > codeAnimationTypeStatesNumber) {
+      codeAnimationTypeState = 1;
+    }
+    codeAnimationTypeEffect();
+  }
+}
+
+document.addEventListener("DOMContentLoaded", codeAnimationTypeEffect);
+
+navigation.addEventListener("click", (e) => {
+  if (!e.target.classList.contains("navigation-item")) {
+    return;
+  }
+  document
+    .querySelector(".active-navigation-item")
+    .classList.remove("active-navigation-item");
+  e.target.classList.add("active-navigation-item");
+
+  document.querySelector(".active-page").classList.add("deactive-page");
+  document.querySelector(".active-page").classList.remove("active-page");
+  let clickedPageName = e.target.dataset.section;
+  document
+    .querySelector(`.section-${clickedPageName}`)
+    .classList.remove("deactive-page");
+  document
+    .querySelector(`.section-${clickedPageName}`)
+    .classList.add("active-page");
+});
+
+contactButton.addEventListener("click", (e) => {
+  document
+    .querySelector(".active-navigation-item")
+    .classList.remove("active-navigation-item");
+  document
+    .querySelector('.navigation-item[data-section="me"]')
+    .classList.add("active-navigation-item");
+
+  document.querySelector(".active-page").classList.add("deactive-page");
+  document.querySelector(".active-page").classList.remove("active-page");
+  document.querySelector(`.section-me`).classList.remove("deactive-page");
+  document.querySelector(`.section-me`).classList.add("active-page");
 });

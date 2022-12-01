@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Pacifico);
 @import url(https://fonts.googleapis.com/css?family=Quicksand);
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro);
 
 * {
   margin: 0;
@@ -208,36 +209,38 @@ body {
   overflow-x: hidden;
   display: grid;
   gap: 5rem;
+  margin-bottom: 5rem;
 }
 
-.section-me {
+.navigation {
+  display: none;
+}
+
+.section-home {
   margin-top: -2rem;
-  display: flex;
-  flex-direction: column;
   color: #fff;
   font-size: 1.2rem;
   line-height: 1.5rem;
   text-align: justify;
-  /* gap: 2rem; */
 }
 
-.section-me .programmer-animation {
+.section-home .programmer-animation {
   transform: translateY(10%);
   width: 20rem;
   height: 20rem;
   margin: auto;
 }
 
-.section-me .programmer-animation lottie-player {
+.section-home .programmer-animation lottie-player {
   width: 100%;
 }
 
-.section-me .introduce-text {
+.section-home .introduce-text {
   padding: 0 1rem;
   transition: 1s;
 }
 
-.section-me .introduce-text .contact-button {
+.section-home .introduce-text .contact-button {
   color: #00ffbf;
   margin: auto;
   margin-top: 1.5rem;
@@ -255,30 +258,30 @@ body {
   position: relative;
 }
 
-.section-me .introduce-text .contact-button > * {
+.section-home .introduce-text .contact-button > * {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 
-.section-me .introduce-text .contact-button > *:last-child {
+.section-home .introduce-text .contact-button > *:last-child {
   position: absolute;
   width: 100%;
 }
 
-.section-me .introduce-text .contact-button > *:nth-child(2) > * {
+.section-home .introduce-text .contact-button > *:nth-child(2) > * {
   opacity: 0;
   transition: color 0.3s, opacity 0.8s;
   width: 1.5rem;
 }
 
-.section-me .introduce-text .contact-button:hover {
+.section-home .introduce-text .contact-button:hover {
   font-weight: bold;
   color: #131418;
   background: #00ffbf;
 }
 
-.section-me .code-animation-section {
+.section-home .code-animation-section {
   /* in desktop version, display should be flex */
   display: none;
 }
@@ -434,7 +437,7 @@ body {
   opacity: 1;
 }
 
-.section-contact {
+.section-me {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -452,7 +455,7 @@ body {
   gap: 3rem;
 }
 
-.section-contact .contact-section-items > * {
+.section-me .contact-section-items > * {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -465,17 +468,17 @@ body {
   line-height: 1.4rem;
 }
 
-.section-contact .contact-section-items svg {
+.section-me .contact-section-items svg {
   width: 10rem;
   opacity: 0.8;
   transition: 0.3s;
 }
 
-.section-contact .contact-section-items > *:hover svg {
+.section-me .contact-section-items > *:hover svg {
   opacity: 1;
 }
 
-.section-contact .section-contact-brand-names {
+.section-me .section-me-brand-names {
   font-family: "pacifico";
 }
 
@@ -590,5 +593,125 @@ body {
 @media all and (min-width: 700px) {
   html {
     font-size: 35px;
+  }
+}
+
+@media all and (min-width: 992px) {
+  html {
+    font-size: 15px;
+  }
+
+  body {
+    margin-bottom: 0;
+    place-items: center;
+    height: 100vh;
+  }
+
+  .deactive-page {
+    display: none !important;
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 2rem;
+    gap: 3rem;
+    font-weight: bold;
+    color: #00dbbe;
+    top: 2.5rem;
+    position: fixed;
+    z-index: 1000;
+    font-size: 1.6rem;
+  }
+
+  .navigation-item {
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.3s;
+  }
+
+  .navigation-item:hover {
+    opacity: 1;
+  }
+
+  .active-navigation-item {
+    color: #00ffdd;
+    opacity: 1;
+  }
+
+  .section-home {
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    width: 100%;
+    padding: 0 1rem;
+    grid-gap: 3%;
+    place-content: center;
+    font-weight: bold;
+    line-height: 2rem;
+  }
+
+  .section-home .programmer-animation {
+    order: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: none;
+    width: auto;
+    height: auto;
+  }
+
+  .section-home .programmer-animation lottie-player {
+    width: 30rem;
+    height: 30rem;
+    position: absolute;
+  }
+
+  .section-home .code-animation-section {
+    display: block;
+    margin-top: 6rem;
+    height: max-content;
+    order: 2;
+    font-size: 1.5rem;
+    color: #ff0079;
+    padding: 0 1rem;
+    font-family: "Source Code Pro";
+    text-align: start;
+    background: linear-gradient(90deg, #ff0079, #00ffdd);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+  }
+
+  .sections-title {
+    display: none;
+  }
+}
+
+@media all and (min-width: 1050px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media all and (min-width: 1111px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+@media all and (min-width: 1178px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media all and (min-width: 1350px) {
+  html {
+    font-size: 20px;
   }
 }
