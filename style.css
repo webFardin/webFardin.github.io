@@ -208,7 +208,7 @@ body {
   width: 100vw;
   overflow-x: hidden;
   display: grid;
-  gap: 5rem;
+  gap: 4rem;
   margin-bottom: 5rem;
 }
 
@@ -327,19 +327,9 @@ body {
 .section-works .works-section-subjects .works-section-titles {
   font-size: 1.1rem;
   color: #00ffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 0.2rem;
 }
 
-.section-works .works-section-subjects .works-section-titles > *:last-child {
-  font-size: 0.9rem;
-}
-
-.section-works h4,
-.section-works h5 {
+.section-works h4 {
   font-size: inherit;
 }
 
@@ -443,7 +433,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
   padding: 0 2rem;
 }
 
