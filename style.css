@@ -437,7 +437,7 @@ body {
   padding: 0 2rem;
 }
 
-.contact-section-items {
+.section-me-items {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -445,7 +445,7 @@ body {
   gap: 3rem;
 }
 
-.section-me .contact-section-items > * {
+.section-me .section-me-items > * {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -458,13 +458,13 @@ body {
   line-height: 1.4rem;
 }
 
-.section-me .contact-section-items svg {
+.section-me .section-me-items svg {
   width: 10rem;
   opacity: 0.8;
   transition: 0.3s;
 }
 
-.section-me .contact-section-items > *:hover svg {
+.section-me .section-me-items > *:hover svg {
   opacity: 1;
 }
 
