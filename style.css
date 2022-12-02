@@ -14,7 +14,9 @@
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   font-size: 16px;
+  -webkit-user-select: none;
   user-select: none;
   scroll-behavior: smooth;
 }
@@ -238,6 +240,20 @@ body {
 .section-home .introduce-text {
   padding: 0 1rem;
   transition: 1s;
+}
+
+.section-home .introudce-text-hello {
+  font-size: 1.4rem;
+  color: yellow;
+  font-family: "pacifico";
+}
+
+.section-home .introudce-text-name {
+  display: block;
+  color: #0ff;
+  font-size: 2.6rem;
+  margin: 1.3rem 0;
+  font-family: "pacifico";
 }
 
 .section-home .introduce-text .contact-button {
@@ -618,7 +634,9 @@ body {
     position: fixed;
     z-index: 1000;
     font-size: 1.6rem;
-    background: #131418;
+    background: #131418ab;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
   }
 
   .navigation-item {
@@ -675,9 +693,9 @@ body {
     font-family: "Source Code Pro";
     text-align: start;
     background: linear-gradient(90deg, #ff0079, #00ffdd);
-    background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
   }

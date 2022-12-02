@@ -238,7 +238,7 @@ navigation.addEventListener("click", (e) => {
 
 contactButton.addEventListener("click", (e) => {
   // For mobile version
-  sectionMe.scrollIntoView();
+  sectionMe.scrollIntoView(true);
 
   // For desktop version
   document
