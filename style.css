@@ -610,7 +610,7 @@ body {
   body {
     margin-bottom: 0;
     place-items: center;
-    height: 100vh;
+    min-height: 100vh;
   }
 
   body > *:not(.navigation) {
@@ -726,5 +726,23 @@ body {
 @media all and (min-width: 1350px) {
   html {
     font-size: 20px;
+  }
+}
+
+@media all and (min-width: 1720px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+@media all and (min-width: 1920px) {
+  html {
+    font-size: 28px;
+  }
+}
+
+@media all and (min-width: 2500px) {
+  html {
+    font-size: 35px;
   }
 }
