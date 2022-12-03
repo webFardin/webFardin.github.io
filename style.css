@@ -613,10 +613,6 @@ body {
     min-height: 100vh;
   }
 
-  body > *:not(.navigation) {
-    margin-top: 5rem;
-  }
-
   .deactive-page {
     display: none !important;
   }
@@ -702,6 +698,12 @@ body {
 
   .sections-title {
     display: none;
+  }
+}
+
+@media all and (max-height: 840px) {
+  body > *:not(.navigation) {
+    margin-top: 5rem;
   }
 }
 

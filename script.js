@@ -163,7 +163,7 @@ worksSectionSubjectsData.forEach((item, index) => {
 let codeAnimationTypedWords = 0;
 let codeAnimationTypeState = 1;
 let codeAnimationText;
-let codeAnimationTypeStatesNumber = 4;
+let codeAnimationTypeStatesNumber = 5;
 
 function codeAnimationTypeEffect() {
   switch (codeAnimationTypeState) {
@@ -181,6 +181,10 @@ function codeAnimationTypeEffect() {
 
     case 4:
       codeAnimationText = 'let state = "Junior";';
+      break;
+
+    case 5:
+      codeAnimationText = 'console.log("You are great! i love you so much❤");';
       break;
   }
 
