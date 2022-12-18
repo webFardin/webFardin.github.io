@@ -1,25 +1,25 @@
-"use strict";
+'use strict';
 
-let contactButtonTextWrapper = document.querySelector(
-  "#contactButton > *:first-child"
+const contactButtonTextWrapper = document.querySelector(
+    '#contactButton > *:first-child',
 );
-let contactButtonIcons = document.querySelectorAll(
-  ".contact-button > *:nth-child(2) > *"
+const contactButtonIcons = document.querySelectorAll(
+    '.contact-button > *:nth-child(2) > *',
 );
 
-let contactButton = document.getElementById("contactButton");
+const contactButton = document.getElementById('contactButton');
 
-let sectionMe = document.getElementById("meSection");
+const sectionMe = document.getElementById('meSection');
 
-let worksSectionSubjects = document.getElementById("worksSectionSubjects");
+const worksSectionSubjects = document.getElementById('worksSectionSubjects');
 
-let codeAnimationWrapper = document.getElementById("codeAnimationWrapper");
+const codeAnimationWrapper = document.getElementById('codeAnimationWrapper');
 
-let navigation = document.getElementById("navigation");
+const navigation = document.getElementById('navigation');
 
 let typedWords = 0;
 function contactButtonTypeEffect() {
-  let contactButtonText = "Contact me";
+  const contactButtonText = 'Contact me';
 
   contactButtonTextWrapper.textContent += contactButtonText[typedWords];
   typedWords = contactButtonTextWrapper.textContent.length;
@@ -46,22 +46,22 @@ function contactButtonTextRemover() {
 
 function contactButtonIconsEffect() {
   setTimeout(() => {
-    contactButtonIcons[0].style.opacity = "1";
+    contactButtonIcons[0].style.opacity = '1';
   }, 100);
   setTimeout(() => {
-    contactButtonIcons[1].style.opacity = "1";
+    contactButtonIcons[1].style.opacity = '1';
   }, 700);
   setTimeout(() => {
-    contactButtonIcons[2].style.opacity = "1";
+    contactButtonIcons[2].style.opacity = '1';
   }, 1300);
 
   setTimeout(() => {
-    contactButtonIcons[0].style.opacity = "0";
+    contactButtonIcons[0].style.opacity = '0';
     setTimeout(() => {
-      contactButtonIcons[1].style.opacity = "0";
+      contactButtonIcons[1].style.opacity = '0';
     }, 200);
     setTimeout(() => {
-      contactButtonIcons[2].style.opacity = "0";
+      contactButtonIcons[2].style.opacity = '0';
     }, 400);
   }, 8000);
   setTimeout(() => {
@@ -69,45 +69,45 @@ function contactButtonIconsEffect() {
   }, 9000);
 }
 
-document.addEventListener("DOMContentLoaded", contactButtonTypeEffect);
+document.addEventListener('DOMContentLoaded', contactButtonTypeEffect);
 
-let worksSectionSubjectsData = [
+const worksSectionSubjectsData = [
   {
-    name: "Templates",
+    name: 'Templates',
     icon: `<svg xmlns="http://www.w3.org/2000/svg" style="width: 0.8rem" fill="currentColor" viewBox="0 0 16 16">
   <path d="M0 1a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm9 0a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1V1zm0 9a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-5z"></path>
 </svg>`,
     boxes: [
       {
-        gif: "https://i.postimg.cc/nh5y2c5J/20221116-174755.gif",
-        github: "https://github.com/webFardin/Templates/tree/main/01-Loading",
-        codepen: "https://codepen.io/webFardin/full/JjpXGME",
+        gif: 'https://i.postimg.cc/nh5y2c5J/20221116-174755.gif',
+        github: 'https://github.com/webFardin/Templates/tree/main/01-Loading',
+        codepen: 'https://codepen.io/webFardin/full/JjpXGME',
       },
       {
-        gif: "https://i.postimg.cc/gJmbrgRY/20220629-180020.gif",
+        gif: 'https://i.postimg.cc/gJmbrgRY/20220629-180020.gif',
         github:
-          "https://github.com/webFardin/Templates/tree/main/02-Paint%20Toolbox",
-        codepen: "https://codepen.io/webFardin/full/poLoYVd",
+          'https://github.com/webFardin/Templates/tree/main/02-Paint%20Toolbox',
+        codepen: 'https://codepen.io/webFardin/full/poLoYVd',
       },
       {
-        gif: "https://i.postimg.cc/m2bQqXyK/20220924-165439.gif",
+        gif: 'https://i.postimg.cc/m2bQqXyK/20220924-165439.gif',
         github:
-          "https://github.com/webFardin/Templates/tree/main/03-Music%20Player",
-        codepen: "https://codepen.io/webFardin/full/WNJZVmJ",
+          'https://github.com/webFardin/Templates/tree/main/03-Music%20Player',
+        codepen: 'https://codepen.io/webFardin/full/WNJZVmJ',
       },
     ],
   },
   {
-    name: "Games",
+    name: 'Games',
     icon: `<svg xmlns="http://www.w3.org/2000/svg" style="width: 0.8rem" fill="currentColor" viewBox="0 0 16 16">
     <path d="M3 0a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3H3zm1 5.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm8 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm1.5 6.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zM12 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM5.5 12a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zM4 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
   </svg>`,
     boxes: [
       {
-        gif: "https://i.postimg.cc/httds8Vz/the-Last-Strawberry.gif",
+        gif: 'https://i.postimg.cc/httds8Vz/the-Last-Strawberry.gif',
         github:
-          "https://github.com/webFardin/Games/tree/main/01-The%20Lost%20Strawberry",
-        codepen: "https://codepen.io/webFardin/full/jOxormx",
+          'https://github.com/webFardin/Games/tree/main/01-The%20Lost%20Strawberry',
+        codepen: 'https://codepen.io/webFardin/full/jOxormx',
       },
     ],
   },
@@ -129,7 +129,7 @@ worksSectionSubjectsData.forEach((item) => {
 
 worksSectionSubjectsData.forEach((item, index) => {
   item.boxes.forEach((box) => {
-    document.querySelectorAll(".works-section-boxes")[index].innerHTML += `
+    document.querySelectorAll('.works-section-boxes')[index].innerHTML += `
       <div
         class="sample-works-boxes"
         style="background-image: url(${box.gif})"
@@ -163,7 +163,7 @@ worksSectionSubjectsData.forEach((item, index) => {
 let codeAnimationTypedWords = 0;
 let codeAnimationTypeState = 1;
 let codeAnimationText;
-let codeAnimationTypeStatesNumber = 5;
+const codeAnimationTypeStatesNumber = 5;
 
 function codeAnimationTypeEffect() {
   switch (codeAnimationTypeState) {
@@ -203,8 +203,8 @@ function codeAnimationTypeEffect() {
 
 function codeAnimationTextRemover() {
   codeAnimationWrapper.textContent = codeAnimationWrapper.textContent.slice(
-    0,
-    -1
+      0,
+      -1,
   );
   codeAnimationTypedWords = codeAnimationWrapper.textContent.length;
   if (codeAnimationWrapper.textContent.length != 0) {
@@ -218,42 +218,42 @@ function codeAnimationTextRemover() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", codeAnimationTypeEffect);
+document.addEventListener('DOMContentLoaded', codeAnimationTypeEffect);
 
-navigation.addEventListener("click", (e) => {
-  if (!e.target.classList.contains("navigation-item")) {
+navigation.addEventListener('click', (e) => {
+  if (!e.target.classList.contains('navigation-item')) {
     return;
   }
   document
-    .querySelector(".active-navigation-item")
-    .classList.remove("active-navigation-item");
-  e.target.classList.add("active-navigation-item");
+      .querySelector('.active-navigation-item')
+      .classList.remove('active-navigation-item');
+  e.target.classList.add('active-navigation-item');
 
-  document.querySelector(".active-page").classList.add("deactive-page");
-  document.querySelector(".active-page").classList.remove("active-page");
-  let clickedPageName = e.target.dataset.section;
+  document.querySelector('.active-page').classList.add('deactive-page');
+  document.querySelector('.active-page').classList.remove('active-page');
+  const clickedPageName = e.target.dataset.section;
   document
-    .querySelector(`.section-${clickedPageName}`)
-    .classList.remove("deactive-page");
+      .querySelector(`.section-${clickedPageName}`)
+      .classList.remove('deactive-page');
   document
-    .querySelector(`.section-${clickedPageName}`)
-    .classList.add("active-page");
+      .querySelector(`.section-${clickedPageName}`)
+      .classList.add('active-page');
 });
 
-contactButton.addEventListener("click", (e) => {
+contactButton.addEventListener('click', (e) => {
   // For mobile version
   sectionMe.scrollIntoView(true);
 
   // For desktop version
   document
-    .querySelector(".active-navigation-item")
-    .classList.remove("active-navigation-item");
+      .querySelector('.active-navigation-item')
+      .classList.remove('active-navigation-item');
   document
-    .querySelector('.navigation-item[data-section="me"]')
-    .classList.add("active-navigation-item");
+      .querySelector('.navigation-item[data-section="me"]')
+      .classList.add('active-navigation-item');
 
-  document.querySelector(".active-page").classList.add("deactive-page");
-  document.querySelector(".active-page").classList.remove("active-page");
-  document.querySelector(`.section-me`).classList.remove("deactive-page");
-  document.querySelector(`.section-me`).classList.add("active-page");
+  document.querySelector('.active-page').classList.add('deactive-page');
+  document.querySelector('.active-page').classList.remove('active-page');
+  document.querySelector(`.section-me`).classList.remove('deactive-page');
+  document.querySelector(`.section-me`).classList.add('active-page');
 });
