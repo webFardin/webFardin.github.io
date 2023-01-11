@@ -176,7 +176,7 @@ function codeAnimationTypeEffect() {
       break;
 
     case 3:
-      codeAnimationText = 'let skills = "HTML, CSS, JavaScript, Git";';
+      codeAnimationText = 'let skills = "HTML, CSS, JavaScript, Sass, Git";';
       break;
 
     case 4:
